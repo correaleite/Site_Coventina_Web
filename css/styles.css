@@ -1,11 +1,11 @@
 @font-face {
     font-family: IBMPlexSansJP;
-    src: url(/fonts/IBMPlexSansJP-Bold.ttf);
+    src: url(../fonts/IBMPlexSansJP-Bold.ttf);
 }
 
 @font-face {
     font-family: Manrope;
-    src: url(/fonts/Manrope-VariableFont_wght.ttf);
+    src: url(../fonts/Manrope-VariableFont_wght.ttf);
 }
 
 * {
@@ -109,6 +109,10 @@ p {
     width: 200px;
 }
 
+.logo-clicavel {
+    opacity: 100%;
+}
+
 .menu-list {
     display: flex;
     gap: var(--spacing-60);
@@ -126,6 +130,55 @@ p {
 
 .titulo-hero h1 {
     font-size: 10vmin;
+    animation: tracking-in-contract 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+}
+
+@-webkit-keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-contract {
+  0% {
+    letter-spacing: 1em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    letter-spacing: normal;
+    opacity: 1;
+  }
+}
+
+.titulo-hero p {
+    position: relative;
+    margin: 0 auto;
+    border-right: 2px solid rgba(255,255,255,.75);
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);   
+    animation: typewriter 1.5s steps(25) .1s 1 normal both, blinkingCursor 500ms steps(50) infinite normal;
+
+}
+
+@keyframes typewriter {
+  from { width: 0; }
+  to { width: 390px;}
+}
+@keyframes blinkingCursor{
+  from { border-right-color: rgba(255,255,255,.75); }
+  to { border-right-color: transparent; }
 }
 
 .container-desafio {
@@ -139,6 +192,7 @@ p {
 .container-desafio img {
     width: 50%;
 }
+
 
 .container-desafio .caixa-texto {
     width: 800px;
@@ -299,7 +353,7 @@ footer img {
 }
 
 .section-publico-alvo {
-    height: 100vh;
+    height: 110vh;
     background-image: linear-gradient(to right, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0)),
     url(../images/nasa-lugar.svg);
     background-repeat: no-repeat;
@@ -308,7 +362,7 @@ footer img {
 }
 
 .section-beneficios {
-    height: 100vh;
+    height: 110vh;
     background-image: url(../images/foguete-lua.svg);
     background-repeat: no-repeat;
     background-size: cover;
