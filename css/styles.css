@@ -131,7 +131,7 @@ p {
 
 .titulo-hero h1 {
     font-size: 10vmin;
-    animation: tracking-in-contract 1.2s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
+    animation: tracking-in-contract 1.3s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
 }
 
 @keyframes tracking-in-contract {
@@ -274,6 +274,7 @@ p {
     flex-direction: row;
     align-items: center;
     width: 1050px;
+    gap: var(--spacing-100);
     margin-top: var(--spacing-100);
 }
 
@@ -284,6 +285,13 @@ p {
     justify-content: center;
     text-align: center;
     width: 100%;
+    gap: var(--spacing-10);
+}
+
+.item-objetivos img {
+    width: 100%;
+    margin-bottom: var(--spacing-30);
+
 }
 
 .item-objetivos p {
@@ -320,6 +328,14 @@ p {
     border-bottom: 1.5px solid var(--color-light);
     padding-block: var(--spacing-30);
     gap: var(--spacing-20);
+}
+
+.beneficios-lista i {
+    color: rgb(255, 212, 59);
+}
+
+.beneficios-lista p {
+    font-size: 2vmin;
 }
 
 .container-aplicacoes {
