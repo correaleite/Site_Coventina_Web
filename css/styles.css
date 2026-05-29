@@ -223,6 +223,8 @@ p {
     justify-content: center;
     gap: var(--spacing-10);
     width: 100%;
+    padding-inline: var(--spacing-100);
+    backdrop-filter: blur(2px);
 
 }
 
@@ -237,17 +239,7 @@ p {
     width: 600px;
 }
 
-.container-robo h1 {
-    color: var(--color-dark);
-}
 
-.container-robo h3 {
-    color: var(--color-dark);
-}
-
-.container-robo p {
-    color: var(--color-dark);
-}
 
 .container-objetivos {
     display: flex;
@@ -277,8 +269,8 @@ p {
     align-items: center;
     justify-content: end;
     width: 100%;
-    gap: var(--spacing-100);
-    padding-top: var(--spacing-50);
+    gap: var(--spacing-60);
+    padding-top: var(--spacing-60);
     padding-bottom: 100px;
 }
 
@@ -294,9 +286,14 @@ p {
 }
 
 .item-objetivos img {
-    width: 80%;
+    width: 70%;
     margin-bottom: var(--spacing-30);
+}
 
+.item-objetivos .foguete-espacial {
+    height: 300px;
+    width: 40%;
+    margin-bottom: var(--spacing-40);
 }
 
 .item-objetivos p {
@@ -360,18 +357,6 @@ p {
     width: 600px;
 }
 
-.container-aplicacoes h1 {
-    color: var(--color-dark);
-}
-
-.container-aplicacoes h3 {
-    color: var(--color-dark);
-}
-
-.container-aplicacoes p {
-    color: var(--color-dark);
-}
-
 footer {
     height: 50vh;
     display: flex;
@@ -400,13 +385,22 @@ footer img {
 } 
 
 .section-robo {
-    background-color: var(--color-light);
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0)),
+    url(../images/fundo-dentro-nave.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
     display: flex;
     justify-content: center;
-    padding-inline: var(--spacing-100);
 }
 
 .section-objetivos {
+    background-image: linear-gradient(to right, rgba(0, 0, 0, .5), rgba(0, 0, 0, 0)),
+    url(../images/fundo-estrelas.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    display: flex;
     display: flex;
     justify-content: center;
     padding-inline: var(--spacing-70);
@@ -433,7 +427,6 @@ footer img {
 }
 
 .section-aplicacoes {
-    background-color: var(--color-light);
     display: flex;
     justify-content: center;
     padding-inline: var(--spacing-100);
