@@ -379,7 +379,30 @@ p {
 .container-publico-alvo {
     width: 100%;
     padding-top: 150px;
+    display: flex;
+    backdrop-filter: blur(4px);
 }
+
+.container-publico-alvo img {
+    width: 58%;
+}
+
+.grupo-logos {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-right: 170px;
+}
+
+.topo-logos {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
 .container-publico-alvo .caixa-texto {
     width: 100%;
     padding-left: 100px;
