@@ -17,6 +17,7 @@
 :root {
     --color-light: #ffffff;
     --color-dark: #000000;
+    --color-yellow: #EEFF00;
     --spacing-5:5px;
     --spacing-10:10px;
     --spacing-20:20px;
@@ -89,7 +90,7 @@ p {
 .hero {
     height: 100vh;
     background-image: linear-gradient(to right, rgba(0, 0, 0, .3), rgba(0, 0, 0, 0)),
-    url(../images/fundo-lua-coventina.svg);
+    url(../images/lua-fundo-coventina2.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
@@ -183,17 +184,42 @@ p {
 
 }
 
-.container-desafio img {
+.container-desafio .lua {
     width: 45%;
-    animation: fade-in both, fade-out linear;
+    animation: fade-in ease, fade-out ease;
     animation-timeline: view(), view();
     animation-range: entry, exit;
+}
+
+.foguete {
+    margin-top: auto;
+    width: 30px;
+    animation: rocket-up 20s linear infinite;
+}
+
+
+
+@keyframes rocket-up {
+    0%
+    {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    100%
+    {
+        transform: translateY(-100vh);
+        opacity: 0;
+    }
+
 }
 
 @keyframes fade-in {
     0% {
         opacity: 0;
-        scale: .8;
+        scale: .7;
     }
     100% {
         opacity: 1;
@@ -208,7 +234,7 @@ p {
   }
   100% {
     opacity: 0;
-    scale: .8;
+    scale: .7;
   }
 }
 .container-desafio .caixa-texto {
@@ -230,7 +256,7 @@ p {
 
 .container-robo img {
     width: 40%;
-    animation: fade-in both, fade-out linear;
+    animation: fade-in ease, fade-out ease;
     animation-timeline: view(), view();
     animation-range: entry, exit;
 }
@@ -238,8 +264,6 @@ p {
 .container-robo .caixa-texto {
     width: 600px;
 }
-
-
 
 .container-objetivos {
     display: flex;
@@ -259,10 +283,58 @@ p {
         text-shadow:none;
     }
     100% {
-        text-shadow: 0 0 10px #EEFF00, 0 0 20px #EEFF00, 0 0 40px #EEFF00, 0 0 80px #EEFF00, 0 0 160px #EEFF00;
+        text-shadow: 0 0 10px var(--color-yellow), 0 0 20px var(--color-yellow), 0 0 40px var(--color-yellow), 0 0 80px var(--color-yellow), 0 0 160px var(--color-yellow);
     }
 }
 
+/* .estrela-cadente {
+    top:50%;
+    left:50%;
+    width: 4px;
+    height: 4px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 0 4px rgba(255,255,255,0.1),0 0 0 8px rgba(255,255,255,0.1),0 0 20px rgba(255,255,255,0.1);
+    animation: animate 3s linear infinite;
+
+}
+
+.estrela-cadente::before {
+    content:'';
+    position: absolute;
+    top: 50%;
+    transform: translateY(-60%);
+    width: 300px;
+    height: 1px;
+    background: linear-gradient(90deg,#fff,transparent);
+}
+
+@keyframes animate
+{
+    0%
+    {
+        transform: rotate(315deg) translateX(0);
+        opacity: 1;
+    }
+    70%
+    {
+        opacity: 1;
+    }
+    100%
+    {
+        transform: rotate(315deg) translateX(-1000px);
+        opacity: 0;
+    }
+}
+
+.estrela-cadente:nth-child(1){
+    top: 0;
+    right: 0;
+    left: initial;
+    animation-delay: 0s;
+    animation-duration: 3s;
+}
+ */
 
 .grupo-objetivos {
     display: flex;
@@ -273,6 +345,7 @@ p {
     padding-top: var(--spacing-60);
     padding-bottom: 100px;
 }
+
 
 .item-objetivos {
     display: flex;
@@ -288,6 +361,9 @@ p {
 .item-objetivos img {
     width: 70%;
     margin-bottom: var(--spacing-30);
+    animation: fade-in ease, fade-out ease;
+    animation-timeline: view(), view();
+    animation-range: entry, exit;
 }
 
 .item-objetivos .foguete-espacial {
@@ -343,12 +419,13 @@ p {
     justify-content: center;
     gap: var(--spacing-10);
     width: 100%;
+    padding-top: var(--spacing-30);
 
 }
 
 .container-aplicacoes img {
-    width: 40%;
-    animation: fade-in both, fade-out linear;
+    width: 30%;
+    animation: fade-in ease, fade-out ease;
     animation-timeline: view(), view();
     animation-range: entry, exit;
 }
@@ -404,7 +481,6 @@ footer img {
     display: flex;
     justify-content: center;
     padding-inline: var(--spacing-70);
-
 }
 
 .section-publico-alvo {
@@ -427,6 +503,10 @@ footer img {
 }
 
 .section-aplicacoes {
+    background-image: url(../images/plantação-fundo.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
     display: flex;
     justify-content: center;
     padding-inline: var(--spacing-100);
