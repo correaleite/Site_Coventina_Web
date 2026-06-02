@@ -22,12 +22,17 @@
                     <li><a href="#aplicacoes" class="menu-list-item">APLICAÇÕES</a></li>
                 </ul>
             </nav>
+            <div class="botoes-fundo">
+                <button id="preto"></button>
+                <button id="cinza"></button>
+                <button id="cinza_claro"></button>
+            </div>
         </header>
-        
+
         <div class="titulo-hero">
-            <h1>COVENTINA</h1>
+            <h1 class="cor-amarelo">COVENTINA</h1>
             <div class="p-titulo-hero">
-                <p>EXTRAINDO POSSIBILIDADES ALÉM DA TERRA</p>
+                <p id="cor-amarelo">EXTRAINDO POSSIBILIDADES ALÉM DA TERRA</p>
             </div>
         </div>
     </div>
@@ -36,7 +41,7 @@
         <div class="container-desafio">
             <img class="lua" src="./images/Lua.svg" alt="img-lua" loading="lazy">
             <div class="caixa-texto">
-                <h1>DESAFIO ENFRENTADO</h1>
+                <h1 id="cor-amarelo">DESAFIO ENFRENTADO</h1>
                 <p>Os recursos minerais da Terra são limitados e sua extração se tornará<br> mais cara futuramente.</p>
                 <p>Transportar água e oxigênio da Terra para a Lua<br> possui custos extremamente altos para missões espaciais.</p>
             </div>
@@ -54,7 +59,19 @@
                  <p>A Coventina é um robô autônomo que perfura e coleta gelo<br> nos polos da Lua.</p>
                  <p>Ela oferece uma fonte local, renovável e escalável de água<br> e oxigênio, reduzindo custos operacionais e acelerando o desenvolvimento infraestrutural</p>
             </div>
-            <img src="./images/Coventina2frente.svg" alt="Coventina-frente" loading="lazy">
+            <div class="slideshow-container">
+                <div class="mySlides fade">
+                    <img src="./images/Coventinafrente.svg" alt="Coventina-frente" loading="lazy">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="./images/Coventinadireita.svg" alt="Coventina-frente" loading="lazy">
+                </div>
+
+                <div class="mySlides fade">
+                    <img src="./images/CoventinaEsquerda.svg" alt="Coventina-frente" loading="lazy">
+                </div>
+            </div>
         </div>
     </section>
 
@@ -117,8 +134,26 @@
                     <p>O robô poderá abastecer astronautas com água e<br> auxiliar plantações em bases lunares.</p>
                     <p>A tecnologia ajudará futuras viagens entre<br> Terra e Lua com quantidades de abastecimento extra</p>
             </div>
-            <img src="./images/Coventina2direita.svg" alt="CoventinaDireita" loading="lazy">
+            <img src="./images/Coventinadireita.svg" alt="CoventinaDireita" loading="lazy">
         </div>
+    </section>
+
+      <section class="section-quiz">
+        <div class="container-quiz">
+            <div id="quiz">
+                <h1>QUIZ INTERATIVO</h1>
+                <div class="pergunta" id="pergunta"></div>
+                <div class="opcoes" id="opcoes"></div>
+            </div>
+            <div class="card-nome" id="cardNome">
+                <div>
+                    <label for="IDnome">Nome:</label>
+                    <input type="text" id="IDnome" name="IDnome" placeholder="minímo de 5 caracteres"/>
+                </div>
+                <button id="btnRegistrar">Registrar</button>
+            </div>
+        </div>
+        
     </section>
 
     <footer>
@@ -135,6 +170,12 @@
             </li>
         </ul>
     </footer>
+
+    <script src="./js/quiz.js"></script>
+    <script src="./js/background.js"></script>
+    <script src="./js/coventina_slideshow.js"></script>
+    <script src="./js/formulario.js"></script>
+
     
 </body>
 </html>
